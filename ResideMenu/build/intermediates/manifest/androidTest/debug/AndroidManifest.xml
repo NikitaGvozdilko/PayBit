@@ -3,7 +3,7 @@
     package="com.special.ResideMenu.test" >
 
     <uses-sdk
-        android:minSdkVersion="21"
+        android:minSdkVersion="18"
         android:targetSdkVersion="23" />
 
     <instrumentation

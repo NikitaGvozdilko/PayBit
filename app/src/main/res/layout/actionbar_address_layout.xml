@@ -15,7 +15,7 @@
                 android:orientation="vertical"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
-                android:weightSum="1">
+                >
                 <LinearLayout
                     android:id="@+id/linearMainPrimary"
                     android:layout_width="match_parent"
@@ -34,7 +34,6 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.10"
-
                         >
 
                         <ImageView
@@ -59,7 +58,7 @@
                             android:singleLine="true"
                             android:text="Primary Address"
                             android:textColor="#000"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -90,15 +89,14 @@
                     >
 
                     <LinearLayout
-                        
                         android:id="@+id/addressFieldP"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="50dp"
                         android:background="@drawable/text_border_green"
+                        android:gravity="center"
                         android:orientation="horizontal"
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
-                        android:gravity="center"
                         android:weightSum="1">
 
                         <LinearLayout
@@ -106,8 +104,7 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.10"
-                            android:gravity="center"
-                            >
+                            android:gravity="center">
 
                             <ImageView
                                 android:layout_width="30dp"
@@ -120,16 +117,15 @@
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.90"
-                            android:paddingLeft="15dp"
-                            >
+                            android:paddingLeft="15dp">
 
                             <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
                                 android:id="@+id/edtAddressFieldP"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:lines="4"
                                 android:gravity="left|center"
-                                android:hint="Address" />
+                                android:hint="Address"
+                                android:lines="4" />
                         </LinearLayout>
 
                     </LinearLayout>
@@ -137,87 +133,91 @@
                     <LinearLayout
                         android:id="@+id/addressHomeP"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.20"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/ledtAddress"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
                         android:background="@drawable/text_border_green"
                         android:orientation="horizontal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:weightSum="1">
+                        android:weightSum="1"
 
-                        <LinearLayout
+                        >
+
+                        <ImageView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/padding_10dp"
                             android:layout_weight="0.10"
-                            android:layout_marginBottom="10dp"
-                            >
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/icon_home_silver" />
 
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:src="@drawable/icon_home_silver" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
+                            android:id="@+id/edtBuildingNumberP"
                             android:layout_width="0dp"
+                            android:gravity="left|center"
                             android:layout_height="match_parent"
                             android:layout_weight="0.90"
-                            android:paddingLeft="15dp"
-                            >
-
-                            <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
-                                android:id="@+id/edtBuildingNumberP"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="left|center"
-                                android:hint="Building Name" />
-                        </LinearLayout>
+                            android:background="#00000000"
+                            android:hint="Building Number"
+                            android:imeActionId="@+id/login"
+                            android:imeOptions="normal|actionUnspecified"
+                            android:inputType="textPostalAddress"
+                            android:lines="4"
+                            android:padding="9.0dip"
+                            android:paddingLeft="10dip"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
                     </LinearLayout>
 
                     <LinearLayout
-                        android:id="@+id/addressFloorP"
+                        android:id="@+id/prFloor"
+                        android:layout_below="@+id/addressFloorP"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.20"
-                        android:background="@drawable/text_border_green"
+                        android:layout_height="50dp"
                         android:orientation="horizontal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:weightSum="1">
+                        android:background="@drawable/text_border_green"
+                        android:weightSum="1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
 
-                        <LinearLayout
+                        >
+                        <ImageView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.10"
-                            android:layout_marginBottom="10dp"
-                            >
+                            android:layout_marginTop="@dimen/padding_10dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/icon_floor_silver"
+                            />
 
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:src="@drawable/icon_floor_silver" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
+                            android:id="@+id/addressFloorP"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Floor Number"
+                            android:paddingLeft="10dip"
+                            android:imeActionId="@+id/login"
+                            android:imeOptions="normal|actionUnspecified"
+                            android:inputType="textPostalAddress"
+                            android:maxLines="1"
+                            android:padding="9.0dip"
+                            android:singleLine="true"
+                            android:textColor="#000"
                             android:layout_weight="0.90"
-                            android:paddingLeft="15dp"
-                            >
-
-                            <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
-                                android:id="@+id/edtFloorNumberP"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="left|center"
-                                android:hint="Floor Number" />
-                        </LinearLayout>
-
-
+                            android:background="#00000000"
+                            android:textSize="15dp"
+                            />
                     </LinearLayout>
+
+
+
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/linearMainSecondary"
                     android:layout_width="match_parent"
@@ -255,13 +255,14 @@
                         >
 
                         <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:id="@+id/textViewSegoePrintFont"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="left|center"
-                            android:text="Secondary Address"
                             android:singleLine="true"
+                            android:text="Secondary Address"
                             android:textColor="#000"
-                            android:textSize="20dp" />
+                            android:textSize="18dp" />
                     </LinearLayout>
 
                     <LinearLayout
@@ -293,7 +294,7 @@
                     <LinearLayout
                         android:id="@+id/addressFieldS"
                         android:layout_width="match_parent"
-                        android:layout_height="100dp"
+                        android:layout_height="50dp"
                         android:layout_weight="0.30"
                         android:background="@drawable/text_border_green"
                         android:orientation="horizontal"
@@ -339,90 +340,83 @@
                     <LinearLayout
                         android:id="@+id/addressHomeS"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.20"
+                        android:layout_height="50dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/ledtAddress"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginRight="0dp"
                         android:background="@drawable/text_border_green"
                         android:orientation="horizontal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:weightSum="1">
+                        android:weightSum="1"
+                        >
 
-
-                        <LinearLayout
+                        <ImageView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
+                            android:layout_marginTop="@dimen/padding_10dp"
                             android:layout_weight="0.10"
-                            android:layout_marginBottom="10dp"
-                            >
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/icon_home_silver" />
 
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:src="@drawable/icon_home_silver" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
+                            android:id="@+id/edtBuildingNumberS"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_weight="0.90"
-                            android:paddingLeft="15dp"
-                            >
-
-                            <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
-                                android:id="@+id/edtBuildingNumberS"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="left|center"
-                                android:hint="Building Name" />
-                        </LinearLayout>
-
-
+                            android:background="#00000000"
+                            android:hint="Building Number"
+                            android:imeActionId="@+id/login"
+                            android:imeOptions="normal|actionUnspecified"
+                            android:inputType="textPostalAddress"
+                            android:maxLines="1"
+                            android:padding="9.0dip"
+                            android:paddingLeft="10dip"
+                            android:singleLine="true"
+                            android:textColor="#000"
+                            android:textSize="15dp" />
                     </LinearLayout>
-
 
                     <LinearLayout
                         android:id="@+id/addressFloorS"
+                        android:layout_below="@+id/ledtBuilding"
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="0.20"
-                        android:background="@drawable/text_border_green"
+                        android:layout_height="50dp"
                         android:orientation="horizontal"
-                        android:paddingLeft="10dp"
-                        android:paddingRight="10dp"
-                        android:weightSum="1">
+                        android:background="@drawable/text_border_green"
+                        android:weightSum="1"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginLeft="@dimen/padding_10dp"
+                        android:layout_marginRight="@dimen/padding_10dp"
 
-
-                        <LinearLayout
+                        >
+                        <ImageView
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
                             android:layout_weight="0.10"
-                            android:layout_marginBottom="10dp"
-                            >
+                            android:layout_marginTop="@dimen/padding_10dp"
+                            android:paddingBottom="10dp"
+                            android:src="@drawable/icon_floor_silver"
+                            />
 
-                            <ImageView
-                                android:layout_width="30dp"
-                                android:layout_height="30dp"
-                                android:src="@drawable/icon_floor_silver" />
-
-                        </LinearLayout>
-
-                        <LinearLayout
+                        <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
+                            android:id="@+id/edtFloorNumberS"
                             android:layout_width="0dp"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Floor Number"
+                            android:paddingLeft="10dip"
+                            android:imeActionId="@+id/login"
+                            android:imeOptions="normal|actionUnspecified"
+                            android:inputType="textPostalAddress"
+                            android:maxLines="1"
+                            android:padding="9.0dip"
+                            android:singleLine="true"
+                            android:textColor="#000"
                             android:layout_weight="0.90"
-                            android:paddingLeft="15dp"
-                            >
-
-                            <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
-                                android:id="@+id/edtFloorNumberS"
-                                android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:gravity="left|center"
-                                android:hint="Floor Number" />
-                        </LinearLayout>
-
-
+                            android:background="#00000000"
+                            android:textSize="15dp"
+                            />
                     </LinearLayout>
 
 

@@ -1,6 +1,5 @@
 package com.cooltechworks.creditcarddesign;
 
-import android.content.Intent;
 import android.support.annotation.NonNull;
 
 import java.util.Calendar;
