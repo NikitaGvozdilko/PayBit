@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    android:background="#e1e1e1"
+
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:fillViewport="true"
+    >
+
+
+
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/photoProfile"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:weightSum="1"
+        android:orientation="horizontal"
+        android:background="#0a968e"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:gravity="center"
+            >
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/profile"
+            android:padding="5dp"
+
+            />
+            <ProgressBar
+                android:id="@+id/progressProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/white"
+                />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.50"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.20"
+                android:layout_marginBottom="10dp"
+                >
+
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Edit A Photo"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    />
+
+            </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.20"
+                android:background="#00897b"
+                android:layout_marginBottom="10dp"
+                >
+
+
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                   android:id="@+id/img_profileCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Take Photo"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.20"
+                android:background="#00897b"
+                android:layout_marginBottom="10dp"
+                >
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/img_profileGallery" 
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Choose Photo"
+                    android:textSize="15dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ledtFName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/text_border_green"
+            android:weightSum="1"
+             android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/padding_10dp"
+            android:layout_marginRight="@dimen/padding_10dp"
+            android:layout_below="@+id/photoProfile"
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/icon_user_silver"
+                />
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/edtFName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingLeft="10dip"
+                android:hint="User Name"
+                android:imeActionId="@+id/login"
+                android:imeOptions="normal|actionUnspecified"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:padding="9.0dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:layout_weight=".80"
+                android:background="#00000000"
+                android:textSize="15dp"
+                />
+            <ImageView
+                android:id="@+id/updateName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/green_right_arrow"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ledtEmail"
+            android:layout_below="@+id/ledtFName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/text_border_green"
+            android:weightSum="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/padding_10dp"
+            android:layout_marginRight="@dimen/padding_10dp"
+
+            >
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:layout_weight="0.10"
+                android:paddingBottom="10dp"
+
+                android:src="@drawable/icon_mail_silver" />
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/edtEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Email Address"
+                android:paddingLeft="10dip"
+                android:imeActionId="@+id/login"
+                android:imeOptions="normal|actionUnspecified"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:padding="9.0dip"
+                android:textColor="#000"
+
+                android:layout_weight="0.80"
+                android:background="#00000000"
+                android:textSize="15dp"
+                />
+
+
+            <ImageView
+                android:id="@+id/updateEmail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/green_right_arrow"
+                />
+            
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ledtmobile"
+            android:layout_below="@+id/ledtEmail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/text_border_green"
+            android:weightSum="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/padding_10dp"
+            android:layout_marginRight="@dimen/padding_10dp"
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/icon_mobile_silver"
+                />
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/edtCountryCode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="+961"
+                android:paddingLeft="10dip"
+                android:text="+961"
+                android:imeActionId="@+id/login"
+                android:imeOptions="normal|actionUnspecified"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:padding="9.0dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:background="#00000000"
+                android:layout_weight="0.20"
+                android:textSize="15dp"
+                />
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/edtPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="PhoneNumber"
+                android:paddingLeft="10dip"
+                android:imeActionId="@+id/login"
+                android:imeOptions="normal|actionUnspecified"
+                android:inputType="number"
+                android:maxLines="1"
+                android:padding="9.0dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:layout_weight="0.60"
+                android:background="#00000000"
+                android:textSize="15dp"
+                />
+
+            <ImageView
+                android:id="@+id/updateMobile"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/green_right_arrow"
+
+                />
+            
+            
+            
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ledtPassword"
+            android:layout_below="@+id/ledtmobile"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/text_border_green"
+            android:weightSum="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/padding_10dp"
+            android:layout_marginRight="@dimen/padding_10dp"
+
+            >
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/icon_lock_silver"
+                />
+
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/edtPassword"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:paddingLeft="10dip"
+                android:imeActionId="@+id/login"
+                android:imeOptions="normal|actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:padding="9.0dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:layout_weight="0.80"
+                android:background="#00000000"
+                android:textSize="15dp"
+                android:text="********"
+
+
+            />
+            <ImageView
+                android:id="@+id/updatePassword"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/green_right_arrow"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ledtAddress"
+            android:layout_below="@+id/ledtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/text_border_green"
+            android:weightSum="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/padding_10dp"
+            android:layout_marginRight="@dimen/padding_10dp"
+
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/icon_location_silver"
+                />
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/edtAdress"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Address Primary"
+                android:paddingLeft="10dip"
+                android:imeActionId="@+id/login"
+                android:imeOptions="normal|actionUnspecified"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:padding="9.0dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:layout_weight="0.80"
+                android:background="#00000000"
+                android:textSize="15dp"
+                />
+
+            <ImageView
+                android:id="@+id/updateAddress"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/green_right_arrow"
+                />
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ledtBuilding"
+            android:layout_below="@+id/ledtAddress"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:background="@drawable/text_border_green"
+            android:weightSum="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="@dimen/padding_10dp"
+            android:layout_marginRight="@dimen/padding_10dp"
+
+            >
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/icon_location_silver"
+                />
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/edtAddressFieldS"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Address Secondary"
+                android:paddingLeft="10dip"
+                android:imeActionId="@+id/login"
+                android:imeOptions="normal|actionUnspecified"
+                android:inputType="textPostalAddress"
+                android:maxLines="1"
+                android:padding="9.0dip"
+                android:singleLine="true"
+                android:textColor="#000"
+                android:layout_weight="0.80"
+                android:background="#00000000"
+                android:textSize="15dp"
+                />
+            <ImageView
+                android:id="@+id/updateAddress2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.10"
+                android:layout_marginTop="@dimen/padding_10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/green_right_arrow"
+                />
+
+        </LinearLayout>
+</RelativeLayout>
+</ScrollView>
+
+
+
+    <LinearLayout
+        android:id="@+id/action_done"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_below="@id/action_image"
+        android:background="@drawable/text_border_green_both"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/padding_10dp"
+        >
+        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Signout"
+            android:textColor="#800000"
+            android:textSize="20dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,345 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frame_sub2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <FrameLayout
+        android:id="@+id/mapFL"
+        android:clickable="false"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+    </FrameLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ProgressBar
+                    android:id="@+id/pbCircular"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:indeterminate="false"
+                    android:max="100"
+                    android:paddingBottom="5dp"
+                    android:paddingTop="5dp"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/circular_progress_bar_driver" />
+            </RelativeLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/switchFL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <com.skyfishjy.library.RippleBackground
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:id="@+id/aniRipple"
+                app:rb_color="@color/colorPrimary"
+                app:rb_type="strokeRipple"
+                app:rb_radius="32dp"
+                app:rb_rippleAmount="4"
+                app:rb_duration="2000"
+                app:rb_scale="3">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/icon_center"
+                    android:layout_centerInParent="true" />
+            </com.skyfishjy.library.RippleBackground>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/llSwitchContainer"
+                    android:layout_width="150dp"
+                    android:layout_height="75dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/round_corner_switch"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:id="@+id/btnLlOffline"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50">
+
+                        <ImageView
+                            android:id="@+id/btnImgOffline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_corner_img"
+                            android:src="@drawable/cross_black" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnLlOnline"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:visibility="invisible">
+
+                        <ImageView
+                            android:id="@+id/btnImgOnline"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/round_corner_img"
+                            android:src="@drawable/checked_black" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <FrameLayout
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/lblbearing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="heading...."
+                    android:layout_weight="0.50"
+                    android:textSize="15dp"
+                    android:textAllCaps="true"
+                    android:gravity="center|right"
+                    android:textColor="#000" />
+
+
+
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/flAcceptRejectDialog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+
+            <LinearLayout
+                android:id="@+id/linearMainConform"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:id="@+id/linearChildConformOne"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:orientation="horizontal">
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/displayHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:background="#000"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    >
+                    <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="CUSTOMER:"
+                        android:layout_weight="0.50"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
+                        android:gravity="center|right"
+                        android:textColor="#00d4f5"
+                        />
+
+                    <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                        android:id="@+id/lblCustomerName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:text="MARTIN"
+                        android:paddingLeft="5dp"
+                        android:textSize="15dp"
+                        android:textAllCaps="true"
+                        android:layout_weight="0.50"
+                        android:gravity="center|left"
+                        android:textColor="#00d4f5"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearNameAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:weightSum="1"
+                    android:gravity="center_vertical"
+
+                    android:orientation="vertical"
+                    android:background="@color/colorPrimary"
+                    >
+
+                    <!--<com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont-->
+                        <!--android:id="@+id/lblPickupAddress"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="0dp"-->
+                        <!--android:text="FAKHANI QOREITEM"-->
+                        <!--android:textSize="20dp"-->
+
+                        <!--android:textAllCaps="true"-->
+                        <!--android:gravity="center"-->
+                        <!--android:textColor="#fff"-->
+                        <!--android:layout_weight="0.40"-->
+                        <!--/>-->
+
+                    <LinearLayout
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+
+                        <uk.co.deanwild.marqueetextview.MarqueeTextView
+
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_marginRight="5dp"
+                            android:layout_marginLeft="15dp"
+                            app:centerText="false"
+                            app:pauseDuration="100"
+                            android:id="@+id/lblPickupAddress"
+                            android:text="FAKHANI QOREITEM"
+                            android:textSize="20dp"
+                            android:textAllCaps="true"
+                            android:gravity="center"
+                            android:textColor="#fff"
+
+
+
+
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                    <ImageView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:gravity="center"
+                        android:src="@drawable/arrow_199_512"
+                        android:layout_weight="0.10"
+                        />
+                    <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                        android:id="@+id/lblCustomerAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:singleLine="true"
+                        android:maxLines="2"
+                        android:visibility="gone"
+                        android:text="KANTARI SUITES,HAMRA,3rd FLOOR"
+                        android:textSize="20dp"
+                        android:textAllCaps="true"
+                        android:gravity="center"
+                        android:textColor="#fff"
+                        android:layout_weight="0.50"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/linearImgHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:weightSum="1"
+                    android:orientation="horizontal"
+                    android:background="#000"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/btnImgAccept"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:src="@drawable/checked_green"
+                        android:layout_weight="0.25"
+                        />
+
+                    <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                        android:id="@+id/lblExpiryCounter"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.50"
+                        android:textColor="@color/white"
+                        android:gravity="center"
+                        android:text="Job expires in : 50 sec"
+                        android:textSize="16dp"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/btnImgReject"
+                        android:layout_width="0dp"
+                        android:layout_height="30dp"
+                        android:gravity="center"
+                        android:src="@drawable/cancel_red"
+                        android:layout_weight="0.25"
+                        />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25"
+                    android:orientation="horizontal">
+                </LinearLayout>
+            </LinearLayout>
+
+
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <FrameLayout
+        android:id="@+id/mapFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+    <LinearLayout
+        android:id="@+id/linearMainConform"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:id="@+id/linearChildConformOne"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:orientation="horizontal">
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/displayHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.10"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:background="#000"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/display_customer"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="CUSTOMER:"
+                android:layout_weight="0.50"
+                android:textSize="15dp"
+                android:textAllCaps="true"
+                android:gravity="center|right"
+                android:textColor="#00d4f5"
+                />
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/lblCustomerName"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:text="MARTIN"
+                android:paddingLeft="5dp"
+                android:textSize="15dp"
+                android:textAllCaps="true"
+                android:layout_weight="0.50"
+                android:gravity="center|left"
+                android:textColor="#00d4f5"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:id="@+id/linearNameAddress"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.20"
+            android:weightSum="1"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            >
+
+            <!--<com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont-->
+                <!--android:id="@+id/lblPickupAddress"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:text="FAKHANI QOREITEM"-->
+                <!--android:textSize="20dp"-->
+                <!--android:textAllCaps="true"-->
+                <!--android:gravity="center"-->
+                <!--android:textColor="#fff"-->
+                <!--android:layout_weight="0.40"-->
+                <!--/>-->
+
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+
+                <uk.co.deanwild.marqueetextview.MarqueeTextView
+                    android:id="@+id/lblPickupAddress"
+
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginLeft="15dp"
+                    app:centerText="false"
+                    app:pauseDuration="100"
+
+                    android:text="FAKHANI QOREITEM"
+                    android:textSize="20dp"
+                    android:textAllCaps="true"
+                    android:gravity="center"
+                    android:textColor="#fff"
+
+
+
+
+                    />
+
+
+            </LinearLayout>
+
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:visibility="gone"
+                android:src="@drawable/arrow_199_512"
+                android:layout_weight="0.10"
+                />
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/lblCustomerAddress"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="KANTARI SUITES,HAMRA,3rd FLOOR"
+                android:textSize="20dp"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textColor="#fff"
+                android:layout_weight="0.50"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linearImgHeader"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.15"
+            android:weightSum="1"
+            android:orientation="horizontal"
+            android:background="#000"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/btnImgAccept"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:src="@drawable/checked_green"
+                android:layout_weight="0.50"
+                />
+            <ImageView
+                android:id="@+id/btnImgReject"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:src="@drawable/cancel_red"
+                android:layout_weight="0.50"
+                />
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

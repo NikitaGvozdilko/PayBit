@@ -1,0 +1,104 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.cooltechworks.creditcarddesign.CreditCardView
+            android:id="@+id/credit_card_view"
+            android:layout_width="320dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+
+            />
+        <com.cooltechworks.creditcarddesign.views.HeightWrappingViewPager
+            android:id="@+id/card_field_container_pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:orientation="horizontal"
+            >
+        </com.cooltechworks.creditcarddesign.views.HeightWrappingViewPager>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:visibility="visible"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:gravity="center"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Add"
+                android:textColor="@color/white"
+                android:textSize="15dp"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="10dp"
+                />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="bottom"
+        android:visibility="visible"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/previous"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:textColor="@android:color/black"
+
+
+            />
+
+        <TextView
+            android:id="@+id/next"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+
+            android:gravity="center"
+
+            android:textColor="@android:color/black"
+
+
+            />
+    </LinearLayout>
+
+    </FrameLayout>
+</ScrollView>
+</LinearLayout>

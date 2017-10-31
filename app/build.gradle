@@ -1,0 +1,101 @@
+buildscript {
+    repositories {
+        maven { url 'https://maven.fabric.io/public' }
+    }
+    dependencies {
+        classpath 'io.fabric.tools:gradle:1.+'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+
+repositories {
+    maven { url "https://dl.bintray.com/michelelacorte/maven/" }
+    maven { url 'https://maven.fabric.io/public' }
+    jcenter()
+    mavenCentral()
+
+   }
+
+
+
+
+
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.1'
+    dexOptions {
+        javaMaxHeapSize "4g" //specify the heap size for the dex process
+        preDexLibraries = false //delete the already predexed libraries
+
+    }
+    defaultConfig {
+        applicationId "com.justimaginethat.gogodriver"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 11
+        versionName "11.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+
+        }
+    }
+
+
+}
+
+
+repositories {
+    jcenter()
+    maven { url "https://jitpack.io" }
+}
+
+dependencies {
+    compile 'com.github.sharish:CreditCardView:v1.0.4'
+    compile project(':marqueetextview')
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile('com.digits.sdk.android:digits:2.0.5@aar') {
+        transitive = true;
+    }
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.android.support:design:25.0.1'
+    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.google.firebase:firebase-core:11.0.0'
+    compile 'com.google.firebase:firebase-messaging:11.0.0'
+    compile 'com.google.android.gms:play-services:11.0.0'
+    compile 'ch.acra:acra:4.9.2'
+    compile 'com.google.maps.android:android-maps-utils:0.4+'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    testCompile 'junit:junit:4.12'
+    compile project(':ResideMenu')
+    compile files('libs/ormlite-android-5.0.jar')
+    compile files('libs/ormlite-core-5.0.jar')
+    compile files('libs/ormlite-jdbc-5.0.jar')
+    compile 'com.skyfishjy.ripplebackground:library:1.0.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.karumi:dexter:4.1.0'
+
+    compile 'com.google.firebase:firebase-auth:11.0.0'
+
+}
+apply plugin: 'com.google.gms.google-services'

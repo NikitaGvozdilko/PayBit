@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/mapFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:id="@+id/frame_sub"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.70"
+
+            >
+
+            <RelativeLayout
+                android:id="@+id/frame_pay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+                <ImageView
+                    android:id="@+id/btnCancelConfirm"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/icon_stop_black" />
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.40"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:weightSum="1">
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.60"
+                            android:gravity="left|center"
+                            android:text="ORDER"
+                            android:textColor="#fff" />
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.10"
+                            android:gravity="center"
+                            android:text="$"
+                            android:textColor="#fff" />
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:id="@+id/orderRate"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.30"
+                            android:gravity="left|center"
+                            android:text="$16.30"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:weightSum="1">
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.60"
+                            android:gravity="left|center"
+                            android:text="DRIVER FEE"
+                            android:textColor="#fff" />
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.10"
+                            android:gravity="center"
+                            android:text="$"
+                            android:textColor="#fff" />
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:id="@+id/driverRate"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.30"
+                            android:gravity="left|center"
+                            android:text="$2.00"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.03"
+                        android:background="#000"
+                        android:orientation="horizontal"
+                        android:weightSum="1"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal"
+                        android:paddingLeft="30dp"
+                        android:weightSum="1"
+
+                        >
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.60"
+                            android:gravity="left|center"
+                            android:text="TOTAL"
+                            android:textColor="#fff" />
+
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.10"
+                            android:gravity="center"
+                            android:text="$"
+                            android:textColor="#fff" />
+
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:id="@+id/totalRate"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.30"
+                            android:gravity="left|center"
+                            android:text="$18.30"
+                            android:textColor="#fff" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/action_pay"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.15"
+                        android:background="#000"
+                        android:foregroundGravity="bottom"
+
+                        >
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:gravity="center"
+                            android:text="PAY"
+                            android:textColor="#fff"
+                            android:textSize="20dp">
+
+                        </com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont>
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:id="@+id/frame_done"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="1"
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.40"></LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/colorPrimaryDark">
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:id="@+id/textViewSegoePrintFont3"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Transaction Successfully"
+                            android:textColor="#fff"
+                            android:textSize="20dp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.10"
+                        android:background="@color/colorPrimaryDark"
+                        android:orientation="horizontal"
+                        android:weightSum="1"
+
+                        >
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Your payment has been successfully made."
+                            android:textColor="#fff"
+                            android:textSize="15dp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/action_done"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.15"
+                        android:background="#000"
+                        android:foregroundGravity="bottom"
+
+                        >
+
+                        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+
+                            android:gravity="center"
+                            android:text="DONE"
+                            android:textColor="#fff"
+                            android:textSize="20dp">
+
+                        </com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </FrameLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_sub2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <FrameLayout
+                    android:id="@+id/frame_bottom_down_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.50"
+                    android:visibility="invisible"
+
+
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#000"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+
+                        <ImageView
+                            android:id="@+id/action_image_down"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.20"
+                            android:background="#000"
+                            android:src="@drawable/icon_down_arro" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.80"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+
+                            >
+
+                            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                                android:id="@+id/driverName"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.40"
+                                android:gravity="center"
+                                android:text="ZIAd"
+                                android:textColor="#fff"
+                                android:textSize="20dp"
+
+                                />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgDriver"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.20"
+                                android:src="@drawable/user_profile" />
+
+                            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                                android:id="@+id/driverRating"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.40"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:gravity="center"
+                                android:text="4.87/5"
+                                android:textColor="#fff"
+                                android:textSize="20dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frame_bottom_down_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.50"
+                    android:background="#25000000">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#24000000"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+
+                        <ImageView
+                            android:id="@+id/action_image_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.20"
+                            android:background="#000"
+                            android:src="@drawable/icon_up_arrow" />
+
+                        <LinearLayout
+                            android:id="@+id/lcall_action"
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.80"
+                            android:gravity="center"
+                            >
+
+
+
+                            <ImageView
+                                android:id="@+id/call_action"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/contact_black" />
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlLoading"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/flBackgroundblack"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/background_blure"
+            />
+
+        <ProgressBar
+            android:id="@+id/pbCircular"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:indeterminate="false"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/circular_progress_bar_connecting" />
+
+        <FrameLayout
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:background="@drawable/circelview_linear_layout">
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/connectDriver"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Confirming your payment"
+                android:textColor="#fff"
+                android:textSize="15dp"></com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont>
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/frameWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:padding="0dp"
+        android:visibility="gone"
+        android:layout_margin="0dp"
+        >
+        <WebView
+            android:layout_weight="0.9"
+            android:id="@+id/web_view"
+            android:layout_width="match_parent"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            android:layout_height="0dp" />
+
+        <Button
+            android:id="@+id/btnRetry"
+            android:padding="0dp"
+            android:layout_margin="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1"
+            android:background="@color/colorPrimaryDark"
+            android:text="CLOSE AND RETRY"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+                />
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+</FrameLayout>

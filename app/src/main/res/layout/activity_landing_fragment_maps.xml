@@ -1,0 +1,289 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/title_bar_left_menu"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="left|center_vertical"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/titlebar_menu_selector" />
+
+        <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+            android:id="@+id/title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/padding_10dp"
+            android:layout_weight="0.90"
+            android:gravity="center"
+            android:text="BEIRUT"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#fff"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnLocationSearch"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="right|center_vertical"
+
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/pluse_location" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/mapFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/pickerLayoutFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+
+        >
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center"
+
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:id="@+id/pickupList_header"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/frame_rounded_shape">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="#A000"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                        android:id="@+id/txtSetPickupLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="30dp"
+                        android:paddingTop="@dimen/padding_5dp"
+                        android:text="Set Pickup Location"
+                        android:textColor="#FFF"
+                        android:textSize="20dp" />
+
+                    <ImageView
+                        android:id="@+id/imgArrow_up"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/down_arrow" />
+
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/pickupList_child"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/frame_rounded_shape">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_weight="1"
+                    android:background="#A000"
+
+                    >
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.8"
+                        android:padding="1dp"
+                        >
+
+                        <AutoCompleteTextView
+                            android:id="@+id/search_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@android:color/transparent"
+                            android:hint="Search Pick Location"
+                            android:textColor="#fff"
+                            android:textColorHint="#AFFF" />
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.2">
+
+                        <ImageView
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_search" />
+
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:layout_marginTop="38dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recList"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.90"
+                            ></android.support.v7.widget.RecyclerView>
+
+                        <ImageView
+                            android:id="@+id/btnDown"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="bottom|right"
+                            android:layout_weight="0.10"
+                            android:src="@drawable/up_arrow" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+
+    <FrameLayout
+        android:id="@+id/pickerLayoutConBL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        >
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        >
+
+        <FrameLayout
+            android:id="@+id/pickerLayoutBL"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="40dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#000"
+                android:orientation="horizontal"
+                android:weightSum="1"
+
+                >
+
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.80"
+                    android:gravity="center"
+                    android:text="CONFIRM"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0.20"
+                    android:src="@drawable/icon_side_right_whit" />
+            </LinearLayout>
+        </FrameLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+
+                android:gravity="right"
+                android:orientation="horizontal"
+                android:weightSum="1"
+
+                >
+
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.50"
+                    android:background="#A000"
+                    android:gravity="center"
+                    android:text="DELIVERY FEE:$2"
+                    android:textColor="#fff"
+                    android:textSize="15dp" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+    </FrameLayout>
+
+
+</FrameLayout>
+

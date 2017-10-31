@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.justimaginethat.gogodriver"
+
+    android:versionCode="11"
+    android:versionName="11.0">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permisson.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:name=".CrashReport.PayBitApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+    android:largeHeap="true"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activity_splash_screen.SplashScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity_reset_password_pkg.activity_reset_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_forgot_password_pkg.activity_forgot_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_otp_verification_pkg.activity_otp_verification"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_login_pkg.activity_login"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_registration_pkg.RegistrationActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize"
+            />
+        <activity
+            android:name=".activity_error_webview_pkg.activity_error_webview"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity_landing_pkg.user.History.activity_history"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_settings.updateModule.UpdateMobileNumberProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_settings.updateModule.updateSecondaryAddressProfile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity_settings.updateModule.updateNameProfile"
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".activity_registration_pkg.RegistrationActivityOne"
+            android:screenOrientation="portrait" />
+
+
+
+
+        <activity
+            android:name=".activity_settings.updateModule.UpdateEmailProfile"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity_settings.updateModule.updateAddressProfile"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".activity_map_marker.MapMarkerActivity"
+            android:screenOrientation="portrait">
+
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+
+
+
+
+        </activity>
+
+        <activity
+            android:name=".activity_settings.activity_update_setting"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait">
+
+
+
+        </activity>
+
+        <activity
+            android:name=".activity_map_marker.MapsActivity"
+            android:screenOrientation="portrait">
+
+
+
+        </activity>
+
+
+        <activity
+            android:name=".activity_landing_pkg.user.fragment_activity_landing_user"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+
+
+
+        </activity>
+
+
+        <activity
+            android:name=".activity_landing_pkg.driver.fragment_activity_landing_driver"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+
+
+
+        <activity
+            android:name=".activity_landing_pkg.user.activity_default_address_setter"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
+        <activity
+            android:name=".activity_landing_pkg.driver.fragments.fragment_address_driver"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+        <activity android:name=".activity_landing_pkg.user.Payment.PaymentCardActivity"
+         android:screenOrientation="portrait"
+            />
+
+        <activity android:name="com.cooltechworks.creditcarddesign.CardEditActivity"
+            android:screenOrientation="portrait"
+            />
+
+
+
+
+        <activity
+            android:name=".activity_landing_pkg.user.fragments.AddressMapPickerActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+            android:name=".activity_landing_pkg.driver.fragments.AddressMapPickerDriverActivity"
+            android:screenOrientation="portrait">
+        </activity>
+
+
+        <activity
+            android:name=".Camerapkg.CameraActivity"
+            android:screenOrientation="portrait">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+
+        </activity>
+
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="9a253f8393d396219f12e7d797d48f55df3a8f9f" />
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!-- <activity -->
+        <!-- android:name=".activity_landing_pkg.fragments.AddressMapPickerActivity" -->
+        <!-- android:label="@string/title_activity_maps" /> -->
+
+        <service android:name=".FirebaseCloudMessagingServices.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FirebaseCloudMessagingServices.MyFirebaseInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

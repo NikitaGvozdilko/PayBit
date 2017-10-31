@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.90">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.90"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/topbar"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0.30"
+                    android:orientation="horizontal">
+                    <!--(It's just for confirmation for your reset password authorisation.Thank You.)-->
+                    <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5.0dip"
+                        android:gravity="left|center"
+                        android:text="Please enter OTP that have receive in your register phone number."
+                        android:textColor="#ff000000"
+                        android:textSize="20.0sp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/email_login_form"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="0.15"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5.0dip"
+                    android:paddingRight="5.0dip"
+                    android:weightSum="1"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.09"
+                        android:src="@drawable/icon_lock_silver" />
+
+                    <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
+                        android:id="@+id/edtConfirmOTP"
+                        android:layout_width="0dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.80"
+                        android:background="#00000000"
+                        android:hint="ENTER OTP HERE"
+                        android:imeActionId="@+id/login"
+                        android:imeOptions="normal|actionUnspecified"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:padding="9.0dip"
+                        android:paddingLeft="10dip"
+                        android:singleLine="true"
+                        android:textColor="#000"
+                        android:textSize="15dp" />
+
+                    <ImageView
+                        android:id="@+id/btnResend"
+                        android:layout_width="10dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="0.09"
+                        android:src="@drawable/icon_resend_silver" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ibtnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".10"
+            android:background="@color/colorPrimary"
+            android:gravity="bottom">
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Submit"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:id="@+id/FM"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.skyfishjy.library.RippleBackground xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/aniRipple"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:rb_color="@color/colorPrimary"
+        app:rb_duration="2000"
+        app:rb_radius="32dp"
+        app:rb_rippleAmount="4"
+        app:rb_scale="3"
+        app:rb_type="strokeRipple"
+
+        >
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/icon_center"
+
+            />
+    </com.skyfishjy.library.RippleBackground>
+
+    <ScrollView
+        android:id="@+id/scrollerMap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/pickerLayoutFL"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            >
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="80dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/pickupList_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+
+                        android:background="@drawable/barblack">
+
+                        <LinearLayout
+                            android:layout_gravity="center"
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                                android:id="@+id/txtSetPickupLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:paddingTop="9dp"
+                                android:text="Pickup Location"
+                                android:textColor="#FFF"
+                                android:textSize="21dp" />
+
+                            <ImageView
+                                android:id="@+id/imgArrow_up"
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:src="@drawable/down_arrow" />
+                        </LinearLayout>
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:id="@+id/pickupList_child"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/basebg">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="60dp"
+                            android:layout_marginLeft="-10dp"
+                            android:layout_marginRight="-10dp"
+                            android:layout_marginTop="-5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/typeinrbar">
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent">
+
+                                <EditText
+                                    android:id="@+id/search_name"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+
+                                    android:ems="10"
+                                    android:hint=""
+                                    android:textColor="#fff"
+                                    android:textColorHint="#AFFF" />
+
+
+                            </FrameLayout>
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.2">
+
+                                <ImageView
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_gravity="center"
+                                    android:layout_marginRight="5dp"
+                                    android:src="@drawable/icon_search" />
+
+
+                            </FrameLayout>
+
+
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_marginTop="50dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="7dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="0dp"
+                                android:orientation="horizontal"
+
+                                android:weightSum="1">
+
+                                <android.support.v7.widget.RecyclerView
+                                    android:id="@+id/recList"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+
+                                    android:layout_weight="0.90"></android.support.v7.widget.RecyclerView>
+
+                                <ImageView
+                                    android:id="@+id/btnDown"
+                                    android:layout_width="0dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="bottom|right"
+                                    android:layout_weight="0.10"
+                                    android:src="@drawable/icon_up_arrow" />
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+
+                    </FrameLayout>
+
+                </LinearLayout>
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </ScrollView>
+
+
+</FrameLayout>

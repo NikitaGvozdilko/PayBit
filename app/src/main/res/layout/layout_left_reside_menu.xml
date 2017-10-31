@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.22"
+            android:layout_gravity="center"
+            >
+            <RelativeLayout
+
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="20dp"
+               >
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/nv_userIMG"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/icon_profile_placeholder"
+                    />
+                <ProgressBar
+                    android:id="@+id/progressProfile"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="5dp"
+                    android:indeterminate="true"
+                    android:indeterminateTint="@color/white"
+                    />
+
+            </RelativeLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/nv_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Test"
+                    android:textColor="@color/color_white"
+                    android:layout_margin="10dp"
+                    android:gravity="center|left"
+                    android:layout_gravity="center"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.8"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+
+            >
+
+
+
+
+            <LinearLayout
+                android:id="@+id/btnOrder"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:id="@+id/nv_orderIMG"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    />
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/nv_orderName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Order"
+                    android:textColor="@color/color_white"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnHistory"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:id="@+id/nv_historyIMG"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    />
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/nv_historyName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="History"
+                    android:textColor="@color/color_white"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/btnPayment"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:id="@+id/nv_paymentIMG"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    />
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/nv_paymentName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Payment"
+                    android:textColor="@color/color_white"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnaddplace"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    />
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Add a place"
+                    android:textColor="@color/color_white"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnSetting"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                >
+                <ImageView
+                    android:id="@+id/nv_settingIMG"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:visibility="gone"
+                    />
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/nv_settingName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="Settings"
+                    android:textColor="@color/color_white"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnLocation"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:id="@+id/nv_locationIMG"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    />
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/nv_locationName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="ADDRESS"
+                    android:textColor="@color/color_white"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnLogout"
+                android:padding="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                >
+                <ImageView
+                    android:id="@+id/nv_logoutIMG"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    />
+                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                    android:id="@+id/nv_logoutName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:text="LOGOUT"
+                    android:textColor="@color/color_white"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center|left"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+</LinearLayout>

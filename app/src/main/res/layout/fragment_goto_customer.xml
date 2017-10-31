@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/mapFL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </FrameLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <FrameLayout
+            android:id="@+id/frame_sub"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.60"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1"
+                >
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="0dp"-->
+                    <!--android:layout_weight="0.40">-->
+
+                <!--</LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_gravity="top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:background="@color/colorPrimaryDark"
+                    android:orientation="horizontal"
+                    android:paddingLeft="20dp"
+                    android:gravity="center"
+                    android:paddingRight="20dp"
+                    android:weightSum="1">
+                    <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                        android:id="@+id/lblPickupAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+
+                        android:gravity="left|center"
+                        android:text="Fakhani,Qoreitem"
+                        android:textSize="20dp"
+                        android:textColor="#fff" />
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_height="15dp"
+                        android:layout_weight="0.10"
+                        android:visibility="gone"
+                        android:layout_gravity="center"
+                        android:src="@drawable/arrrow_left_199_512" />
+
+                    <ImageView
+                        android:id="@+id/btnGogMap"
+                        android:paddingLeft="10dp"
+                        android:layout_width="0dp"
+                        android:visibility="gone"
+                        android:layout_height="match_parent"
+                        android:layout_weight="0.20"
+                        android:src="@drawable/gmap" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_sub2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.40">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <FrameLayout
+                    android:id="@+id/frame_bottom_down_one"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.40"
+                    android:visibility="invisible"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="1"
+                        android:orientation="vertical"
+                        android:background="#000"
+                        >
+                        <ImageView
+                            android:id="@+id/action_image_down"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/icon_down_arro"
+                            android:layout_weight="0.20"
+                            android:background="#000"
+                            />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0dp"
+                            android:weightSum="1"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.80"
+
+                            >
+
+
+                            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                                android:id="@+id/userName"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:text="ZIAd"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textSize="15dp"
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_weight="0.40"
+
+                                />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/imgUser"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.20"
+                                android:src="@drawable/user_profile" />
+
+                            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                                android:id="@+id/userRating"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text="4.87/5"
+                                android:textSize="15dp"
+                                android:textColor="#fff"
+                                android:gravity="center"
+                                android:layout_weight="0.40"
+                                />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:id="@+id/frame_bottom_down_two"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.30"
+                    android:background="#25000000">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#24000000"
+                        android:orientation="vertical"
+                        android:weightSum="1">
+
+
+                        <ImageView
+                            android:id="@+id/action_image_up"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="0.20"
+                            android:background="#000"
+                            android:src="@drawable/icon_up_arrow" />
+
+                        <LinearLayout
+                            android:id="@+id/lcall_action"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:layout_weight="0.70"
+                            android:weightSum="1"
+
+                            >
+                            <ImageView
+                                android:id="@+id/call_action"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:src="@drawable/contact_black" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </FrameLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.30"
+                    >
+                    <FrameLayout
+                        android:id="@+id/bottom_frame_reached"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:id="@+id/arriveAtPickup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="1"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp"
+                        android:paddingLeft="10dp"
+                        android:background="#000"
+                        android:gravity="center"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+                            android:gravity="center"
+                            >
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/checked_green"
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.60"
+                            >
+                            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="REACHED CUSTOMER"
+                                android:textAllCaps="true"
+                                android:textSize="20dp"
+                                android:textColor="#fff"
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.20"
+                            android:gravity="center"
+                            >
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:src="@drawable/strike_white"
+                                />
+
+                        </LinearLayout>
+                    </LinearLayout>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:id="@+id/bottom_frame_arrived"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="invisible"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:weightSum="1"
+                            android:orientation="horizontal"
+                            android:paddingRight="10dp"
+                            android:paddingLeft="10dp"
+                            android:background="@color/colorPrimary"
+                            android:gravity="center"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.20"
+                                android:gravity="center"
+                                >
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.60"
+                                >
+                                <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:text="ARRIVED AT PICKUP"
+                                    android:textAllCaps="true"
+                                    android:textSize="20dp"
+                                    android:textColor="#fff"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.20"
+                                android:gravity="center"
+                                >
+
+                                <ImageView
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:src="@drawable/strike_white"
+                                    android:id="@+id/imageView3" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </FrameLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+</FrameLayout>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="55dp"
+    >
+
+
+    <FrameLayout
+        android:id="@+id/custom_info_windowMain"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp">
+
+
+        <RelativeLayout
+
+            android:background="@drawable/infowindow_rounded_shape"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            >
+
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/tvDuration"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:gravity="center"
+                android:text="2Min"
+                android:layout_centerInParent="true"
+                android:textColor="#fff"
+                android:textSize="10sp" />
+
+            <ProgressBar
+                android:paddingTop="5dp"
+                android:id="@+id/progressbar"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:paddingBottom="5dp"
+                android:indeterminate="false"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:max="100"
+                android:progress="100"
+                />
+        </RelativeLayout>
+
+        <LinearLayout
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+            <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
+                android:id="@+id/title"
+                android:paddingLeft="55dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="#fff"
+                android:text="FAKHANI QOREITEM"
+                android:textSize="14dp"
+                />
+        </LinearLayout>
+
+
+
+        </RelativeLayout>
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/custom_info_windowArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:background="@drawable/icon_arrow_down"
+        >
+
+    </FrameLayout>
+</FrameLayout>
