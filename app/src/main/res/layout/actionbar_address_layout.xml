@@ -16,25 +16,25 @@
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 >
+
                 <LinearLayout
                     android:id="@+id/linearMainPrimary"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
 
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/text_border_black"
                     android:orientation="horizontal"
-                    android:paddingLeft="20dp"
                     android:paddingBottom="10dp"
+                    android:paddingLeft="20dp"
                     android:paddingRight="15dp"
-                    android:layout_marginTop="10dp"
                     android:weightSum="1">
 
                     <LinearLayout
                         android:id="@+id/linearAction_imageP"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="0.10"
-                        >
+                        android:layout_weight="0.10">
 
                         <ImageView
                             android:id="@+id/imgArrow_down_P"
@@ -48,8 +48,8 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="0.70"
-                        android:paddingLeft="10dp"
-                        android:gravity="center">
+                        android:gravity="center"
+                        android:paddingLeft="10dp">
 
                         <com.justimaginethat.gogodriver.ExtendedView.TextViewSegoePrintFont
                             android:layout_width="match_parent"
@@ -76,6 +76,7 @@
 
                     </LinearLayout>
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/linear_primary"
                     android:layout_width="match_parent"
@@ -196,7 +197,7 @@
                             />
 
                         <com.justimaginethat.gogodriver.ExtendedView.EditTextSegoePrintFont
-                            android:id="@+id/addressFloorP"
+                            android:id="@+id/edtFloorNumberP"
                             android:layout_width="0dp"
                             android:layout_height="wrap_content"
                             android:hint="Floor Number"
